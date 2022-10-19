@@ -8,16 +8,20 @@ function App() {
     {id: 1,
 text: 'Doctors Appointement',
 day:"tuesday",reminder:"true"},
-{id: 1,
-text: 'Doctors Appointement',
+{id: 2,
+text: 'Teachers Appointement',
 day:"tuesday",reminder:"true"},
-{id: 1,
-text: 'Doctors Appointement',
+{id: 3,
+text: 'Business Appointement',
 day:"tuesday",reminder:"true"},
-{id: 1,
-text: 'Doctors Appointement',
+{id: 4,
+text: 'Friends Appointement',
 day:"tuesday",reminder:"true"},
 ])
+
+const deleteTask = (id)=>{
+  setTasks(tasks.filter((task)=>task.id!==id))
+}
 
   return (
 
@@ -25,7 +29,7 @@ day:"tuesday",reminder:"true"},
     <div className="container">
       {/* <h1>Hello friend! Charu Here</h1> */}
       <Header />
-      <Tasks tasks={tasks} />
+      {tasks.length>0?<Tasks tasks={tasks} onDelete={deleteTask} />:('No tasks to show')}
     </div>
   );
 }

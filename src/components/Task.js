@@ -1,8 +1,8 @@
 import React from 'react'
-
-function Task({task}) {
+import {FaTimes} from 'react-icons/fa'
+function Task({task, onDelete}) {
   return (
-    <div><h3 key={task.id}>{task.text}</h3></div>
+    <div className='task'><h3>{task.text} <FaTimes style={{color:'red', cursor:'pointer'}} onClick={()=>onDelete(task.id)} /> </h3></div>
   )
 }
 
