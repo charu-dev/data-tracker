@@ -23,13 +23,21 @@ const deleteTask = (id)=>{
   setTasks(tasks.filter((task)=>task.id!==id))
 }
 
+const toggleReminder = (id)=>{
+  setTasks(tasks.map((task)=>task.id===id?{ ...task, reminder:!task.reminder}:task))
+  // tasks.map((task)=>task.id===id?console.log(task.reminder))
+  for (let i = 0; i < tasks.length; i++) {
+    if(tasks[i].id===id)console.log(tasks[i].reminder)
+  }
+;}
+
   return (
 
 
     <div className="container">
       {/* <h1>Hello friend! Charu Here</h1> */}
       <Header />
-      {tasks.length>0?<Tasks tasks={tasks} onDelete={deleteTask} />:('No tasks to show')}
+      {tasks.length>0?<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />:('No tasks to show')}
     </div>
   );
 }
