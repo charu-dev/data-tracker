@@ -88,15 +88,15 @@ const toggleReminder =async (id)=>{
       {/* <h1>Hello friend! Charu Here</h1> */}
       <Header onAdd={()=>setShowAddTask(!showAddTask)} showAddTask={showAddTask}/>
       <Routes>
-        <Route path='/' exact render = {(props)=>(
+        <Route exact path='/' element = {
           <>
            {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length>0?<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />:('No tasks to show')}
      
 
           </>
-        )} />
-      <Route path='/about' component={About} />
+       } />
+      <Route path='/about' element={<About />} />
       </Routes>
     
       <Footer />
