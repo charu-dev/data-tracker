@@ -17,12 +17,6 @@
       "text": "Friends Appointement",
       "day": "tuesday",
       "reminder": true
-    },
-    {
-      "text": "New task ",
-      "day": "hehehe",
-      "reminder": false,
-      "id": 5
     }
   ]
 }
