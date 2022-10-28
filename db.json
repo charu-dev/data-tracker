@@ -4,19 +4,19 @@
       "id": 2,
       "text": "Teachers Appointement",
       "day": "tuesday",
-      "reminder": "true"
+      "reminder": true
     },
     {
       "id": 3,
       "text": "usiness Appointement",
       "day": "tuesday",
-      "reminder": "true"
+      "reminder": true
     },
     {
       "id": 4,
       "text": "Friends Appointement",
       "day": "tuesday",
-      "reminder": "true"
+      "reminder": true
     },
     {
       "text": "New task ",
