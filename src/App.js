@@ -4,7 +4,7 @@ import Tasks from './components/Tasks'
 import Header from './components/Header'
 import AddTask from './components/AddTask'
 function App() {
-
+  const [showAddTask, setShowAddTask]=useState(false)
   const [tasks,setTasks]=useState([
     {id: 1,
 text: 'Doctors Appointement',
@@ -43,8 +43,8 @@ const toggleReminder = (id)=>{
 
     <div className="container">
       {/* <h1>Hello friend! Charu Here</h1> */}
-      <Header />
-      <AddTask onAdd={addTask} />
+      <Header onAdd={()=>setShowAddTask(!showAddTask)} showAddTask={showAddTask}/>
+      {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length>0?<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />:('No tasks to show')}
     </div>
   );
