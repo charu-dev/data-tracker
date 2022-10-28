@@ -1,9 +1,11 @@
 
+import { Link } from "react-router-dom"
+
 const About=() =>{
   return (
     <div>
     <h4>About me? Ask your mom!! </h4>
-    <a href="/">Go Back</a>
+    <Link tp="/">Go Back</Link>
     </div>
   )
 }
